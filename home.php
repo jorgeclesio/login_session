@@ -6,13 +6,15 @@
 </head>
 
 <?php
-//$_SESSION["username"]=$_POST["username"];
-echo "Welcome ".$_SESSION["username"];
-//echo "Welcome Kunwar.";
+if(!isset($_SESSION["username"]))    //checks the session start condition
+{
+	header("location: index.php");   //redirect to index
+}
+else{
+	echo "Welcome ".$_SESSION["username"];
+}
 ?>
-<?php 
-include("logout.php");
-?>
+
 <form method="post" action="logout.php">
 <input type="submit" name="logout" value="Log Out" />
 </form>

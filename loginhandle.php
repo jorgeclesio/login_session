@@ -15,9 +15,7 @@ if (isset($_POST["submit"])) {
 		
 		header("Location: index.php?response=1" );
 		
-		//header("location: index.php");
-			//	echo "Wrong Username or Password";
-		
+	
 	}
 	
 } 
