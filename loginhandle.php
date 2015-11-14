@@ -2,8 +2,9 @@
 
 if (isset($_POST["submit"])) {
 	
-	$username_val= $_POST["username"];
-	$password_val= $_POST["password"];
+	$username_val= addslashes $_POST["username"];
+	$password_val= addslashes $_POST["password"];
+	//addslashes aumenta a segurança e evita ataques como o Sql_Injection
 	
 	if($username_val=="kunwar" && $password_val=="kcp")  //username and password are compared with predefined one. 
 	{
