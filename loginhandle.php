@@ -2,8 +2,8 @@
 
 if (isset($_POST["submit"])) {
 	
-	$username_val= $_POST["username"];
-	$password_val= $_POST["password"];
+	$username_val= addslashes ($_POST["username"]);
+	$password_val= addslashes ($_POST["password"]); //Evite entrada de ', ou seja Sql Injection
 	
 	if($username_val=="kunwar" && $password_val=="kcp")  //username and password are compared with predefined one. 
 	{
@@ -14,8 +14,7 @@ if (isset($_POST["submit"])) {
 	else {
 		
 		header("Location: index.php?response=1" );
-		
-	
+
 	}
 	
 } 
