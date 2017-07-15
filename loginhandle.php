@@ -4,7 +4,7 @@ if (isset($_POST["submit"])) {
 	
 	$username_val= addslashes ($_POST["username"]);
 	$password_val= addslashes ($_POST["password"]); //Evite entrada de ', ou seja Sql Injection
-	
+	//$password_val= mysql_real_escape_string ($_POST["password"]);
 	if($username_val=="kunwar" && $password_val=="kcp")  //username and password are compared with predefined one. 
 	{
 	
